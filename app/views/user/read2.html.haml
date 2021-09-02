@@ -1,0 +1,5 @@
+%h1 User Read
+%h2= @user.name
+%ul
+    - @posts.each do |post|
+        %li= post.msg
