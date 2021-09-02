@@ -1,5 +1,5 @@
 %h1 Post Create
-Create message: "
-= @msg
-" with user_id: 
-= @user_id
+- if @post.valid?
+    = "Successfully create a post with message: \"#{@msg}\" with user_id: #{@user_id}"
+- else
+    = "Failed to create a post with message: \"#{@msg}\" with user_id: #{@user_id}"

@@ -1,5 +1,9 @@
 %h1 User Read
-%h2= @user.name
-%ul
-    - @posts.each do |post|
-        %li= post.msg
+- if @valid_id
+    %h2= @user.name
+    %ul
+        - @posts.each do |post|
+            %li= post.msg
+- else
+    %strong Cannot find the given user_id:
+    %strong= @user_id
