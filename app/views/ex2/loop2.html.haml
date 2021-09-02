@@ -1,0 +1,10 @@
+%h1 Loop
+%p This is a loop
+
+- (1..10).each do |i|
+    = i
+%br
+%ul
+    - @results.each do |result|
+        %li
+            = result

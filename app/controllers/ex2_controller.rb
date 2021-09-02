@@ -18,5 +18,6 @@ class Ex2Controller < ApplicationController
     if isAInt && isBInt
       @results = (a..b).to_a
     end
+    render 'loop2'
   end
 end
